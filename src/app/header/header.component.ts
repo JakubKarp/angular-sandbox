@@ -4,15 +4,15 @@ import { Component } from '@angular/core';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  styles: [`
-    div {
-      background: red
-    }
-  `]
+  // styles: [`
+  //   div {
+  //     background: red
+  //   }
+  // `]
 })
 
 export class HeaderComponent {
-  title = 'header';
+  title = 'Angular';
   num = 1;
   is = true;
   disa = true;

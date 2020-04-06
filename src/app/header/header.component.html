@@ -1,9 +1,10 @@
-<div>
-  <h3> I'm {{title}} {{ is ? 'component': 'no'}} nr {{ getNumber() }} </h3>
+<div class='header-container'>
+  <h3> Hi {{title}} {{ is ? 'sandbox': 'boxsand'}} nr {{ getNumber() }} </h3>
   <app-header-item></app-header-item>
   <app-header-item></app-header-item>
   <p>{{ paragraphText }}</p>
   <button
+    class='big-button'
     [disabled]='!disa'
     (click)='onCreateParagraphText()'>
       Big button
