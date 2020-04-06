@@ -3,6 +3,8 @@
   max-width: 1300px;
   background-color: darkgrey;
   min-height: 80vh;
+  border-radius: 4px;
+  box-shadow: 6px 6px 16px 8px dimgray;
 }
 
 h1 {

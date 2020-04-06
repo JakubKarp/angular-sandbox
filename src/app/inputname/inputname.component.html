@@ -1,0 +1,13 @@
+<div class="inputs">
+  <div>
+    <label>Write Something</label>
+    <input type="text" (input)="onWriteSomething($event)" />
+    <div>{{ textExamp }}</div>
+  </div>
+
+  <div>
+    <label>Write Something Second</label>
+    <input type="text" [(ngModel)]="textExampSecond" />
+    <div>{{ textExampSecond }}</div>
+  </div>
+</div>

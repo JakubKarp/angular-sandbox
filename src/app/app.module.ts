@@ -1,18 +1,22 @@
 import { HeaderComponent } from './header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderItemComponent } from './header-item/header-item.component';
+import { InputnameComponent } from './inputname/inputname.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HeaderItemComponent
+    HeaderItemComponent,
+    InputnameComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
