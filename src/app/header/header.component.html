@@ -1,0 +1,12 @@
+<div>
+  <h3> I'm {{title}} {{ is ? 'component': 'no'}} nr {{ getNumber() }} </h3>
+  <app-header-item></app-header-item>
+  <app-header-item></app-header-item>
+  <p>{{ paragraphText }}</p>
+  <button
+    [disabled]='!disa'
+    (click)='onCreateParagraphText()'>
+      Big button
+  </button>
+  <p [innerText]='disa'></p>
+</div>

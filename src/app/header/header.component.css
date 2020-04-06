@@ -1,0 +1,16 @@
+h3 {
+  font-size: 32px;
+  color: blueviolet
+}
+
+button {
+  padding: 30px;
+  background-color: brown;
+  color:yellowgreen;
+  font-size: 16px;
+}
+
+p {
+  font-size: 24px;
+  color: blue;
+}
