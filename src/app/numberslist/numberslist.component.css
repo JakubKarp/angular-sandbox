@@ -1,0 +1,11 @@
+.numberlist {
+  display: flex;
+  justify-content: space-around;
+  color: darkcyan;
+  background-color: darkorange;
+  padding: 8px 0;
+}
+
+ul {
+  width: 10%;
+}

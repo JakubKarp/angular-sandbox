@@ -24,6 +24,6 @@ export class SendeventComponent implements OnInit {
 
   takeRef(element: HTMLButtonElement) {
     // element - to cały element DOM
-    this.refElementInnerText = element.innerText;
+    this.refElementInnerText = `I take text from left button: ${element.innerText}` ;
   }
 }

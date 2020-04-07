@@ -19,3 +19,8 @@ h1 {
   font-size: 16px;
   font-weight: 700;
 }
+
+.divDirective {
+  padding: 16px 0;
+  background: darkslateblue;
+}

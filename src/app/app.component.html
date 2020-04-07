@@ -27,5 +27,10 @@
     (addNumber)='addOneNumber($event)'
   ></app-sendevent>
 
+  <app-numberslist></app-numberslist>
+
+  <div appMyOwnDirective class='text-center divDirective'>Styled with my own directive</div>
+  <div appBetterDirevtive [fwDefault]="'300'" [fwHovered]="'900'"  class='text-center divDirective'>Styled with better directive and @HostListener and @HostBinding and @Input</div>
+
 </div>
 

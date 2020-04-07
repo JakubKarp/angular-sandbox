@@ -32,9 +32,9 @@ export class AppComponent implements OnInit, AfterViewInit, DoCheck {
   // ngAfterViewChecked
   // ngOnDestroy
 
-    ngAfterViewInit() {
-      this.fromViewChild = this.parag.nativeElement.textContent;
-    }
+    // ngAfterViewInit() {
+    //   this.fromViewChild = this.parag.nativeElement.textContent;
+    // }
 
     ngDoCheck() {
       this.fromViewChild = this.parag.nativeElement.textContent;
