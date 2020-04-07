@@ -1,0 +1,20 @@
+.showtext {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px;
+  background-color: darkolivegreen;
+  color: darkkhaki;
+}
+
+.redClass {
+  background-color: red;
+}
+
+.small-button {
+  padding: 8px;
+  background-color: darkturquoise;
+  color:gray;
+  font-size: 16px;
+  border-radius: 8px;
+}

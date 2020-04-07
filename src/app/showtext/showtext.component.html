@@ -1,0 +1,12 @@
+<div class="showtext" [ngClass]='{redClass: yesshow}' >
+  <div>showtext directive *ngIf</div>
+  <button (click)='toggletext()'class='small-button' >{{yesshow ? 'Clik to hide text' : 'Clik to show text'}}</button>
+  <div *ngIf='yesshow; else noShow'>You cliked and *ngIf work very good</div>
+  <ng-template #noShow>
+    <div [ngStyle]='{backgroundColor: getColor()}' >You must to click - I'm ng-template</div>
+  </ng-template>
+  <!-- <div>
+    Musi być tu jednak inny komponent iterowany, a nie div
+    <div *ngIf='let liI of liList; let ind = index' >Jestem kolejnym z listy</div>
+  </div> -->
+</div>

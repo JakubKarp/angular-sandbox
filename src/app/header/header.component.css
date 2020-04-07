@@ -1,13 +1,12 @@
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   /* background-color: darkcyan; */
 }
 
 h3 {
   font-size: 32px;
-  padding-left: 32px;
   color: darkgray;
 }
 
