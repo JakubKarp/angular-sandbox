@@ -3,5 +3,9 @@
   <h1> This is Angular  - {{title}} </h1>
   <app-inputname></app-inputname>
   <app-showtext></app-showtext>
+  <app-iterator
+    *ngFor='let nam of liList; let ind = index'
+    [element]='nam'
+  ></app-iterator>
 </div>
 
