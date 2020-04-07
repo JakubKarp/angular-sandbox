@@ -1,0 +1,24 @@
+<div class='sendevent'>
+  <div class="col-xs-12">
+    <div class="text-center">
+      <button
+        type="button"
+        class="btn btn-success"
+        (click)='sendEvent()'
+        #buttonElement
+        >Emit event
+      </button>
+    </div>
+  </div>
+  <div class="col-xs-12">
+    <div class="text-center">
+      <button
+          type="button"
+          class="btn btn-info"
+          (click)='takeRef(buttonElement)'
+          > {{refElementInnerText}}
+        </button>
+    </div>
+  </div>
+</div>
+

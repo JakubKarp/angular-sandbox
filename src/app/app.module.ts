@@ -8,6 +8,7 @@ import { HeaderItemComponent } from './header-item/header-item.component';
 import { InputnameComponent } from './inputname/inputname.component';
 import { ShowtextComponent } from './showtext/showtext.component';
 import { IteratorComponent } from './iterator/iterator.component';
+import { SendeventComponent } from './sendevent/sendevent.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { IteratorComponent } from './iterator/iterator.component';
     HeaderItemComponent,
     InputnameComponent,
     ShowtextComponent,
-    IteratorComponent
+    IteratorComponent,
+    SendeventComponent
   ],
   imports: [
     BrowserModule,

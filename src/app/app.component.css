@@ -12,3 +12,10 @@ h1 {
   color: darkcyan;
   text-align: center;
 }
+
+.pparent {
+  padding: 16px 0;
+  color: dimgray;
+  font-size: 16px;
+  font-weight: 700;
+}

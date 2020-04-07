@@ -1,11 +1,31 @@
 <div class='main-container'>
+
   <app-header></app-header>
+
   <h1> This is Angular  - {{title}} </h1>
+
   <app-inputname></app-inputname>
-  <app-showtext></app-showtext>
+
+  <app-showtext>
+    <p>going from parent ng-content</p>
+  </app-showtext>
+
   <app-iterator
     *ngFor='let nam of liList; let ind = index'
     [element]='nam'
   ></app-iterator>
+
+  <div class='row no-gutters'>
+    <div class="col-xs-6">
+      <p class="text-center pparent" #contentFromParagraph> child component send event to parent {{littleNumber}} and {{littleName}} </p>
+    </div>
+    <div class="col-xs-6">
+      <p class="text-center pparent"> from ViewChild: {{fromViewChild}} </p>
+    </div>
+  </div>
+  <app-sendevent
+    (addNumber)='addOneNumber($event)'
+  ></app-sendevent>
+
 </div>
 

@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class IteratorComponent implements OnInit {
   // dekorator input pozwala udostępnić typy do komponentu rodzica - na zewnątrz
+  // i pozwala przyjąć coś od rodzica - input
   @Input() element: {name: string};
 
   // jeśli w nawiasie podasz inną nazwę, to bęzie dostępne nie jako element, ale jako ta nazwa: [otherName]
