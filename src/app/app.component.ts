@@ -1,4 +1,12 @@
-import { Component, OnInit, ViewEncapsulation, ViewChild, ElementRef, AfterViewInit, DoCheck } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewEncapsulation,
+  ViewChild,
+  ElementRef,
+  AfterViewInit,
+  DoCheck,
+} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +15,7 @@ import { Component, OnInit, ViewEncapsulation, ViewChild, ElementRef, AfterViewI
   // css są enkapsulowane. żeby to zmenić po kropce podpowiedzi
   // encapsulation: ViewEncapsulation.Emulated - default, jeszcze jest None oraz Native - dla wspierających przeglądarek
 })
-export class AppComponent implements OnInit, AfterViewInit, DoCheck {
+export class AppComponent implements OnInit, DoCheck {
   title = 'angular-sandbox';
   liList = [{ name: 'Apa' }, { name: 'Gapa' }];
   littleNumber = 1;
@@ -16,7 +24,7 @@ export class AppComponent implements OnInit, AfterViewInit, DoCheck {
 
   // do elementów można się również dodstać za pomocą refów z Angulara: @ViewChild i @ContnetChild
   // w html trzeba zrobić refa: np. #contentFromParagraph
-  @ViewChild('contentFromParagraph', {static: true}) parag: ElementRef;
+  @ViewChild('contentFromParagraph', { static: true }) parag: ElementRef;
 
   constructor() {}
 
@@ -32,15 +40,13 @@ export class AppComponent implements OnInit, AfterViewInit, DoCheck {
   // ngAfterViewChecked
   // ngOnDestroy
 
-    // ngAfterViewInit() {
-    //   this.fromViewChild = this.parag.nativeElement.textContent;
-    // }
+  // ngAfterViewInit() {
+  //   this.fromViewChild = this.parag.nativeElement.textContent;
+  // }
 
-    ngDoCheck() {
-      this.fromViewChild = this.parag.nativeElement.textContent;
-    }
-
-
+  ngDoCheck() {
+    this.fromViewChild = this.parag.nativeElement.textContent;
+  }
 
   addOneNumber(dataFromChild: { lulu: string }) {
     this.littleNumber = this.littleNumber + 1;

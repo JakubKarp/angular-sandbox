@@ -5,7 +5,7 @@ import { Directive, Renderer2, OnInit, ElementRef, HostListener, HostBinding, In
   selector: '[appBetterDirevtive]'
 })
 export class BetterDirevtiveDirective implements OnInit {
-  // inny sposób, ale wykorzystuje również @HostListener
+  // inny sposób, (obok @HostListener) ale wykorzystuje również @HostListener
   //  wtedy można się bezpośrednio odnieść do this.backgroundColor
   @HostBinding('style.backgroundColor') backgroundColor = 'darkslateblue';
 
@@ -15,7 +15,7 @@ export class BetterDirevtiveDirective implements OnInit {
   @HostBinding('style.fontWeight') fontWeight: string;
 
 
-
+  // to potrzwebne do @HostListener
   constructor(private elRef: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit() {
