@@ -17,7 +17,9 @@ import {
   // encapsulation: ViewEncapsulation.Emulated - default, jeszcze jest None oraz Native - dla wspierających przeglądarek
   providers: []
 })
-export class AppComponent implements OnInit, DoCheck {
+export class AppComponent implements OnInit
+// DoCheck
+{
   title = 'angular-sandbox';
   liList = [{ name: 'Apa' }, { name: 'Gapa' }];
   littleNumber = 1;
@@ -64,5 +66,8 @@ export class AppComponent implements OnInit, DoCheck {
   toggleMainPart() {
     this.showMainPart = !this.showMainPart;
   }
+
+  // w templatce html przekazywanie czegokolwiek w nawiasach kwadratowych
+  // to jest przekazywanie każdej dynamicznej informacjio, która może się zmieniać
 
 }

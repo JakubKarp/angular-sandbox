@@ -2,6 +2,19 @@
   <div class="col-xs-12 justify-content-center text-center">
     <div>third-page works!</div>
     <p>Ha</p>
+    <div
+      class="col-xs-12 justify-content-center text-center"
+      [ngStyle]="{ margin: '32px 0' }"
+    >
+      <a routerLink="/second">Navigate to Second</a>
+    </div>
+    <div
+      class="col-xs-12 justify-content-center text-center"
+      [ngStyle]="{ margin: '32px 0' }"
+    >
+      <button class="btn btn-danger" (click)="jumpToHome()">
+        Jump to home page
+      </button>
+    </div>
   </div>
 </div>
-

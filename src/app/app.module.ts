@@ -20,10 +20,12 @@ import { InputService } from './input-service';
 import { LogService } from './log-service';
 import { SecondPageComponent } from './second-page/second-page.component';
 import { ThirdPageComponent } from './third-page/third-page.component';
+import { NameComponent } from './name/name.component';
 
 const appRoutes: Routes = [
   // { path: '', component: AppComponent },
   { path: 'second', component: SecondPageComponent },
+  { path: 'second/:id', component: NameComponent },
   { path: 'third', component: ThirdPageComponent },
 ];
 @NgModule({
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
     ServRightComponent,
     ServRightDeepComponent,
     SecondPageComponent,
-    ThirdPageComponent
+    ThirdPageComponent,
+    NameComponent
   ],
   imports: [
     BrowserModule,

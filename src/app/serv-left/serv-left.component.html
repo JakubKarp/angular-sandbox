@@ -1,15 +1,19 @@
 <div class="serv-left">
   <h3>This component takes data from Deep component via service registered in comp. app </h3>
   <ul class="list-group">
-    <li *ngFor="let oneUser of allUsers" class="list-group-item">
+    <li *ngFor="let oneUser of allUsers, let ind = index" class="list-group-item">
       {{ oneUser.name }}
+      <a
+        [routerLink]="['/second', ind]"
+        href="#"
+      >go to {{ oneUser.name }} page</a>
     </li>
   </ul>
   <button 
     class="btn btn-info"
     (click)='takDeepeData()'
   >
-    Click to  subscribe text from service event emmiter from comp. deep 
+    Click to  subscribe text from service event emmiter from comp. deep
   </button>
   <h3>Subscribed text: {{deepName}}</h3>
 </div>

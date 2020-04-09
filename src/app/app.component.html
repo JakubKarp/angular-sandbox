@@ -14,10 +14,12 @@
       </button>
 
       <ul class="nav nav-tabs">
-        <li role="presentation" class="active"><a routerLink="/">Home</a></li>
-        <li role="presentation"><a routerLink="/second">Second</a></li>
-        <li role="presentation"><a [routerLink]="['/third']">Third</a></li>
+        <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]='{exact: true}' ><a routerLink="/">Home</a></li>
+        <li role="presentation" routerLinkActive="active"><a routerLink="/second">Second</a></li>
+        <li role="presentation" routerLinkActive="active"><a [routerLink]="['/third']">Third</a></li>
       </ul>
+
+      <router-outlet></router-outlet>
 
       <div *ngIf="showMainPart" class="main-container">
         <app-header></app-header>
@@ -77,7 +79,6 @@
         </div>
       </div>
 
-      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

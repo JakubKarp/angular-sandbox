@@ -53,3 +53,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 23. many services registered in one service - comp. app.module / comp. input-service / comp. log-service
 24. event emmiters/subscribers from services comp. input-service comp. serv-left / comp. serv-right-deep
 25. routing - router-outlets - comp. app.module / comp. app
+26. styling route with routerLinkActiveOptions - comp. app (and html template)
+27. dynamic routing /:id, - comp. serv-left / comp. name
+28. passing query parameters - ?

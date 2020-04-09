@@ -19,7 +19,7 @@ export class ServLeftComponent implements OnInit {
   takDeepeData() {
     this.inputService.showNames.subscribe(
       // this event emmiter subscribe from comp. deep, but is triggering on emit on button in comp. deep
-      (eName: string) => {console.log('Event emmiter:', eName); this.deepName = eName;}
+      (eName: string) => { console.log('Event emmiter:', eName); this.deepName = eName; }
     );
   }
 }
