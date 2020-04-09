@@ -18,7 +18,7 @@ export class ShowtextComponent implements OnInit {
   }
 
   getColor() {
-    return !this.yesshow && 'red' ;
+    return !this.yesshow && 'darkcyan' ;
   }
 
 }

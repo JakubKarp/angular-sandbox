@@ -1,0 +1,6 @@
+.right-deep {
+  background-color: darkgreen;
+  min-height: 24vh;
+  display: flex;
+  flex-direction: column;
+}

@@ -12,6 +12,9 @@ import { IteratorComponent } from './iterator/iterator.component';
 import { SendeventComponent } from './sendevent/sendevent.component';
 import { NumberslistComponent } from './numberslist/numberslist.component';
 import { BetterDirevtiveDirective } from './myDirective/better-direvtive.directive';
+import { ServLeftComponent } from './serv-left/serv-left.component';
+import { ServRightComponent } from './serv-right/serv-right.component';
+import { ServRightDeepComponent } from './serv-right-deep/serv-right-deep.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { BetterDirevtiveDirective } from './myDirective/better-direvtive.directi
     SendeventComponent,
     NumberslistComponent,
     MyDirective,
-    BetterDirevtiveDirective
+    BetterDirevtiveDirective,
+    ServLeftComponent,
+    ServRightComponent,
+    ServRightDeepComponent
   ],
   imports: [
     BrowserModule,

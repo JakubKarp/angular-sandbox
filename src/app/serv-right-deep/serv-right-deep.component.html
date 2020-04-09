@@ -1,0 +1,10 @@
+<div class="right-deep justify-content-center col-xs-12">
+  <h3>Deep component</h3>
+  <label>Write name and send it to the service</label>
+  <input type="text" (input)="onWriteSomething($event)" />
+  <button class="btn btn-info"
+    (click)='addNameToService()'
+  > Add new name</button>
+  <h4>{{ inputText }}</h4>
+</div>
+

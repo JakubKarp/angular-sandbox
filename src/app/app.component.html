@@ -1,8 +1,7 @@
-<div class='main-container'>
-
+<div class="main-container">
   <app-header></app-header>
 
-  <h1> This is Angular  - {{title}} </h1>
+  <h1>This is Angular - {{ title }}</h1>
 
   <app-inputname></app-inputname>
 
@@ -11,26 +10,47 @@
   </app-showtext>
 
   <app-iterator
-    *ngFor='let nam of liList; let ind = index'
-    [element]='nam'
+    *ngFor="let nam of liList; let ind = index"
+    [element]="nam"
   ></app-iterator>
 
-  <div class='row no-gutters'>
+  <div class="row no-gutters">
     <div class="col-xs-6">
-      <p class="text-center pparent" #contentFromParagraph> child component send event to parent {{littleNumber}} and {{littleName}} </p>
+      <p class="text-center pparent" #contentFromParagraph>
+        child component send event to parent {{ littleNumber }} and
+        {{ littleName }}
+      </p>
     </div>
     <div class="col-xs-6">
-      <p class="text-center pparent"> from ViewChild: {{fromViewChild}} </p>
+      <p class="text-center pparent">from ViewChild: {{ fromViewChild }}</p>
     </div>
   </div>
-  <app-sendevent
-    (addNumber)='addOneNumber($event)'
-  ></app-sendevent>
+  <app-sendevent (addNumber)="addOneNumber($event)"></app-sendevent>
 
   <app-numberslist></app-numberslist>
 
-  <div appMyOwnDirective class='text-center divDirective'>Styled with my own directive</div>
-  <div appBetterDirevtive [fwDefault]="'300'" [fwHovered]="'900'"  class='text-center divDirective'>Styled with better directive and @HostListener and @HostBinding and @Input</div>
+  <div appMyOwnDirective class="text-center divDirective">
+    Styled with my own directive
+  </div>
+  <div
+    appBetterDirevtive
+    [fwDefault]="'300'"
+    [fwHovered]="'900'"
+    class="text-center divDirective"
+  >
+    Styled with better directive and @HostListener and @HostBinding and @Input
+  </div>
+
+  <div class="justify-content-center">
+    <div class="col-xs-12 justify-content-center services">
+      <h1>Servers - global state</h1>
+      <app-serv-left
+        class="col-xs-6 text-center"
+        [allUsers]='users'
+        ></app-serv-left>
+      <app-serv-right class="col-xs-6 text-center"></app-serv-right>
+    </div>
+  </div>
+
 
 </div>
-

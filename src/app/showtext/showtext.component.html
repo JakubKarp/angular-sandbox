@@ -3,7 +3,7 @@
   <button (click)='toggletext()'class='small-button' >{{yesshow ? 'Clik to hide text' : 'Clik to show text'}}</button>
   <div *ngIf='yesshow; else noShow'>You cliked and *ngIf work very good</div>
   <ng-template #noShow>
-    <div [ngStyle]='{backgroundColor: getColor()}' >You must to click - I'm ng-template</div>
+    <div [ngStyle]='{backgroundColor: getColor(), "padding": "16px"}' >You must to click - I'm ng-template</div>
   </ng-template>
   <ng-content></ng-content>
 </div>

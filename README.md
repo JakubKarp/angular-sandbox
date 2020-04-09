@@ -28,12 +28,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Angular qiuck review
 
-1. CLI - ng (g c) benerate component your_component_name
+1. CLI - ng (g c) generate component your_component_name
 2. string interpolation - {{variable}} / also ternary operator inside - comp. header
 3. property binding - [disabled]='boolean_variable' / [innerText]='text' - comp. header
 4. event binding - (click)='function()' - comp. header
 5. event binding with passing data - (click)='function($event)' - comp. inputname
-6. two-way data binging (input) - [(ngModel)] - comp. inputname
+6. two-way data binding (input) - [(ngModel)] - comp. inputname
 7. styles - [ngClass] / [ngStyle] - comp. showtext
 8. structural directive - *ngIf - comp. showtext
 9. *ngIf conditionaly - with else and ng-template - comp. showtext
@@ -49,3 +49,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 19. directives - @HostListener / @HostBinding - comp. myDirective / comp. app
 20. building own structural directive - *something - ?
 21. ngSwitch - ?
+22. services - global state - simple example - comp. input-service / comp. app / comp. serv-left / comp. serv-right-deep
