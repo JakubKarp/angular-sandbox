@@ -51,3 +51,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 21. ngSwitch - ?
 22. services - global state - simple example - comp. input-service / comp. app / comp. serv-left / comp. serv-right-deep
 23. many servicec registered in one service - comp. app.module / comp. input-service / comp. log-service
+24. event emmiters/subscribers from services comp. input-service comp. serv-left / comp. serv-right-deep

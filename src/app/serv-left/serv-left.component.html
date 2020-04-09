@@ -5,4 +5,11 @@
       {{ oneUser.name }}
     </li>
   </ul>
+  <button 
+    class="btn btn-info"
+    (click)='takDeepeData()'
+  >
+    Click to  subscribe text from service event emmiter from comp. deep 
+  </button>
+  <h3>Subscribed text: {{deepName}}</h3>
 </div>

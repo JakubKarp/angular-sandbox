@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
   providers: []
 })
 export class ServLeftComponent implements OnInit {
-
+  deepName = '';
   @Input() allUsers: {name: string}[] = [];
 
   constructor(private inputService: InputService) { }
@@ -17,8 +17,9 @@ export class ServLeftComponent implements OnInit {
   }
 
   takDeepeData() {
-    // this.inputService.inputServiceHandle(this.leftText);
-    // this.users = this.inputService.users;
-    // console.log("ServLeftComponent -> takDeepeData -> this.inputService.users;", this.inputService.users);
+    this.inputService.showNames.subscribe(
+      // this event emmiter subscribe from comp. deep, but is triggering on emit on button in comp. deep
+      (eName: string) => {console.log('Event emmiter:', eName); this.deepName = eName;}
+    );
   }
 }

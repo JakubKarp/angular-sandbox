@@ -23,7 +23,8 @@ export class ServRightDeepComponent implements OnInit {
 
   // tak się robi - service: w constructor (jeśli wpiszesz w provider - to on będzie tylko lokalny - dla jego dzieci
   // w provider rejestrujemy service na najwyższym rodzicu, z którego chcemy mieć dostęp w jego dzieciach
-  addNameToService() {
-    this.inputService.addName(this.inputText);
+  addNameToService(eName = this.inputText) {
+    this.inputService.addName(eName);
+    this.inputService.showNames.emit(eName);
   }
 }
