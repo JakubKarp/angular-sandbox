@@ -24,6 +24,7 @@ export class AppComponent implements OnInit, DoCheck {
   littleName = '';
   fromViewChild = '';
   users: {name: string}[] = [];
+  showMainPart = false;
 
   // do elementów można się również dodstać za pomocą refów z Angulara: @ViewChild i @ContnetChild
   // w html trzeba zrobić refa: np. #contentFromParagraph
@@ -50,13 +51,18 @@ export class AppComponent implements OnInit, DoCheck {
   //   this.fromViewChild = this.parag.nativeElement.textContent;
   // }
 
-  ngDoCheck() {
-    this.fromViewChild = this.parag.nativeElement.textContent;
-  }
+  // if yu want to function this one - you should remove *ngIf="showMainPart" from app.component.html
+  // ngDoCheck() {
+  //   this.fromViewChild = this.parag.nativeElement.textContent;
+  // }
 
   addOneNumber(dataFromChild: { lulu: string }) {
     this.littleNumber = this.littleNumber + 1;
     this.littleName = dataFromChild.lulu;
+  }
+
+  toggleMainPart() {
+    this.showMainPart = !this.showMainPart;
   }
 
 }

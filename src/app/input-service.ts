@@ -1,5 +1,7 @@
 import { LogService } from './log-service';
 import { Injectable, EventEmitter } from '@angular/core';
+
+// to incjet other service you need to use @Injectable() and add this service in constructor
 @Injectable()
 export class InputService {
   users = [
@@ -10,6 +12,7 @@ export class InputService {
 
   constructor(private logService: LogService) { }
 
+  // this method allows you to use emmit/subscribe technique in components (serv-left / serv-right-deep)
   showNames = new EventEmitter<string>();
 
   addName(newName: string) {

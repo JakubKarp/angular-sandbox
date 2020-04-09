@@ -3,6 +3,7 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderItemComponent } from './header-item/header-item.component';
@@ -17,7 +18,14 @@ import { ServRightComponent } from './serv-right/serv-right.component';
 import { ServRightDeepComponent } from './serv-right-deep/serv-right-deep.component';
 import { InputService } from './input-service';
 import { LogService } from './log-service';
+import { SecondPageComponent } from './second-page/second-page.component';
+import { ThirdPageComponent } from './third-page/third-page.component';
 
+const appRoutes: Routes = [
+  // { path: '', component: AppComponent },
+  { path: 'second', component: SecondPageComponent },
+  { path: 'third', component: ThirdPageComponent },
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,11 +40,15 @@ import { LogService } from './log-service';
     BetterDirevtiveDirective,
     ServLeftComponent,
     ServRightComponent,
-    ServRightDeepComponent
+    ServRightDeepComponent,
+    SecondPageComponent,
+    ThirdPageComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    // to register routes
+    RouterModule.forRoot(appRoutes),
   ],
 
   // to inject service into other service (see LogService in Input Service) - you need provide them here
