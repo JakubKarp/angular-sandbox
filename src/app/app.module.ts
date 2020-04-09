@@ -15,6 +15,8 @@ import { BetterDirevtiveDirective } from './myDirective/better-direvtive.directi
 import { ServLeftComponent } from './serv-left/serv-left.component';
 import { ServRightComponent } from './serv-right/serv-right.component';
 import { ServRightDeepComponent } from './serv-right-deep/serv-right-deep.component';
+import { InputService } from './input-service';
+import { LogService } from './log-service';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,10 @@ import { ServRightDeepComponent } from './serv-right-deep/serv-right-deep.compon
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+
+  // to inject service into other service (see LogService in Input Service) - you need provide them here
+  // and in parent service (InputService)  use @Injectable() and register in constructor
+  providers: [InputService, LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

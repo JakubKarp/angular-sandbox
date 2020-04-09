@@ -15,7 +15,7 @@ import {
   styleUrls: ['./app.component.css'],
   // css są enkapsulowane. żeby to zmenić po kropce podpowiedzi
   // encapsulation: ViewEncapsulation.Emulated - default, jeszcze jest None oraz Native - dla wspierających przeglądarek
-  providers: [InputService]
+  providers: []
 })
 export class AppComponent implements OnInit, DoCheck {
   title = 'angular-sandbox';
