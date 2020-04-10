@@ -21,12 +21,24 @@ import { LogService } from './log-service';
 import { SecondPageComponent } from './second-page/second-page.component';
 import { ThirdPageComponent } from './third-page/third-page.component';
 import { NameComponent } from './name/name.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 const appRoutes: Routes = [
-  // { path: '', component: AppComponent },
-  { path: 'second', component: SecondPageComponent },
-  { path: 'second/:id', component: NameComponent },
+  // in this app you can use path: '' and path: '**' - becasue the structer is wrong
+  // app.component should not contain pages but only <router-outlet></router-outlet>
+  
+  // { path: 'home', component: AppComponent },
+  // { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'second', component: SecondPageComponent},
+  // }, children: [
+  //   { path: ':id', component: NameComponent },
+  // ] },
+  { path: 'second/:id', component: NameComponent},
   { path: 'third', component: ThirdPageComponent },
+  { path: 'not-found', component: ErrorPageComponent, data: {message: 'Something go wrong!'} },
+  // this ** route should be last
+  // { path: '**', redirectTo: '/not-found' },
 ];
 @NgModule({
   declarations: [
@@ -45,13 +57,17 @@ const appRoutes: Routes = [
     ServRightDeepComponent,
     SecondPageComponent,
     ThirdPageComponent,
-    NameComponent
+    NameComponent,
+    NotFoundComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     // to register routes
     RouterModule.forRoot(appRoutes),
+    // for older browsers and servers (servers  parse ulrs first, production?)
+    // RouterModule.forRoot(appRoutes, {useHash: true}),
   ],
 
   // to inject service into other service (see LogService in Input Service) - you need provide them here

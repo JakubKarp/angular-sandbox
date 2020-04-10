@@ -17,7 +17,7 @@ export class ThirdPageComponent implements OnInit {
   }
 
   jumpToHome() {
-    // navigate don't know where you are - what rout you are now
+    // navigate method don't know where you are - what rout you are now
     // you can config this navigation
     // examp: this.router.navigate(['second'], {relativeTo: this.route});
     this.router.navigate(['/']);

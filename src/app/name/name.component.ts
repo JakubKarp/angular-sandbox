@@ -9,13 +9,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class NameComponent implements OnInit {
   name = '';
+  id = '';
+  users: {name: string}[] = [];
+
   constructor(
     private inputService: InputService,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.name = this.route.snapshot.params.id;
+    this.id = this.route.snapshot.params.id;
+    // this.users = this.inputService.users;
+    // this.name = this.users.filter(user => user.name[this.id])[0].name;
   }
 
 }

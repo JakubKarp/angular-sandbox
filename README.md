@@ -54,5 +54,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 24. event emmiters/subscribers from services comp. input-service comp. serv-left / comp. serv-right-deep
 25. routing - router-outlets - comp. app.module / comp. app
 26. styling route with routerLinkActiveOptions - comp. app (and html template)
-27. dynamic routing /:id, - comp. serv-left / comp. name
+27. dynamic routing /:id, - comp. serv-left / comp. name / comp. app
 28. passing query parameters - ?
+29. nested routes / children route - ?
+30. not-found page and routing - comp. app.module / comp. not-found
+31. auth-guard routing - canActivate - ?
+32. canDeactivate routing - ?
+33. passing static data to route / error route message - comp. app (/not-found) / comp. error-page
+33. passing dynamic data to route - good for asynchronus / outside data - ?
+34. hash routing for older browsers - app.module
